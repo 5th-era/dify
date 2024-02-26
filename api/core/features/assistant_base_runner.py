@@ -637,5 +637,7 @@ class BaseAssistantApplicationRunner(AppRunner):
                         ),
                         *tool_call_response
                     ])
+                elif agent_thought.thought:
+                    result.append(AssistantPromptMessage(content=agent_thought.thought))
 
         return result
