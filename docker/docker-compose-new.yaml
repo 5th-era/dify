@@ -317,4 +317,33 @@ services:
       - api
       - web
     ports:
-      - "8000:80"
+      - "80:80"
+
+  chatgpt-on-wechat:
+    image: yz181x/chatgpt-on-wechat:240227
+    container_name: chatgpt-on-wechat
+    security_opt:
+      - seccomp:unconfined
+    environment:
+      OPEN_AI_API_KEY: 'YOUR API KEY'
+      MODEL: 'dify'
+      PROXY: ''
+      SINGLE_CHAT_PREFIX: '[""]'
+      SINGLE_CHAT_REPLY_PREFIX: '" "'
+      GROUP_CHAT_PREFIX: '["@bot"]'
+      GROUP_NAME_WHITE_LIST: '["ChatGPT测试群", "ChatGPT测试群2"]'
+      IMAGE_CREATE_PREFIX: '["画", "看", "找"]'
+      CONVERSATION_MAX_TOKENS: 1000
+      SPEECH_RECOGNITION: 'False'
+      CHARACTER_DESC: ''
+      EXPIRES_IN_SECONDS: 3600
+      USE_GLOBAL_PLUGIN_CONFIG: 'True'
+      USE_LINKAI: 'False'
+      LINKAI_API_KEY: ''
+      LINKAI_APP_CODE: ''
+
+  yanjiang:
+    image: yz181x/yanjiang:240304
+    restart: always
+    # ports:
+      # - "1783:3000"
