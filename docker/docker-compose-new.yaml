@@ -333,4 +333,14 @@ services:
       - api
       - web
     ports:
-      - "1783:80"
+      - "443:443"
+      - "80:80"
+
+  yanjiang:
+    image: yz181x/yanjiang:240308-dify-3
+    container_name: yanjiang
+    networks:
+      - platforms
+    restart: always
+    ports:
+      - "1800:3000"

@@ -152,3 +152,6 @@ sdks/python-client/dify_client.egg-info
 
 .vscode/*
 !.vscode/launch.json
+*.d5j.ai.key
+*.d5j.ai.pem
+speech.d5j.ai*
