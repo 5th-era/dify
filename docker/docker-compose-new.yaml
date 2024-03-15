@@ -364,7 +364,7 @@ services:
       DIFY_API_KEY: 'app-oVuWeRFMgHPkz9Ra1oNRdxEb'
 
   yanjiang:
-    image: yz181x/yanjiang:240308-dify-3
+    image: yz181x/yanjiang:240315-d5j
     networks:
       - platforms
     restart: always
