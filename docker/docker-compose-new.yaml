@@ -337,7 +337,7 @@ services:
       - "80:80"
 
   yanjiang:
-    image: yz181x/yanjiang:240516-d5j
+    image: yz181x/yanjiang:240626-d5j
     networks:
       - platforms
     restart: always
@@ -345,3 +345,9 @@ services:
       - ../../yanjiang/public/scenes:/app/public/scenes
     # ports:
     #   - "1800:3000"
+
+  asr-server:
+    image: yz181x/flask-asr-app:0.1
+    networks:
+      - platforms
+    restart: always
